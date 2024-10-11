@@ -101,7 +101,7 @@ const namaClass = {
 // Loop melalui semua properti di objek
 for (let className in namaClass) {
     // Ambil elemen HTML berdasarkan class
-    let element = document.querySelectorAll(`.${className}`);
+    let element = document.querySelector(`.${className}`);
     
     if (element) {
         // Jika nilai properti adalah array, ambil elemen pertama
