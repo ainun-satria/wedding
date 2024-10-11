@@ -88,3 +88,28 @@ $('#edit').click(function(){
 $all_input.on('change input', function(){
     $('#submit').prop('disabled', false);
 });
+
+
+const namaClass = {
+    "model-destination-to" : "Yth",
+    "model-destination-title" : "Bapak/Ibu/Saudara/i",
+    "model-destination-guestname" : ["satria", "dian", "test"],
+    "model-destination-place" : ["banjar","jakarta", "surabaya"],
+    "model-destination-greeting" : "Bapak/Ibu",
+}
+
+// Loop melalui semua properti di objek
+for (let className in namaClass) {
+    // Ambil elemen HTML berdasarkan class
+    let element = document.querySelector(`.${className}`);
+    
+    if (element) {
+        // Jika nilai properti adalah array, ambil elemen pertama
+        if (Array.isArray(namaClass[className])) {
+            element.textContent = namaClass[className][0];  // Ambil nilai pertama dari array
+        } else {
+            // Jika bukan array, langsung isi dengan nilai
+            element.textContent = namaClass[className];
+        }
+    }
+}
