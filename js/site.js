@@ -101,15 +101,18 @@ const namaClass = {
 // Loop melalui semua properti di objek
 for (let className in namaClass) {
     // Ambil elemen HTML berdasarkan class
-    let element = document.querySelector(`.${className}`);
+    let elements = document.querySelectorAll(`.${className}`);
     
-    if (element) {
-        // Jika nilai properti adalah array, ambil elemen pertama
-        if (Array.isArray(namaClass[className])) {
-            element.textContent = namaClass[className][0];  // Ambil nilai pertama dari array
-        } else {
-            // Jika bukan array, langsung isi dengan nilai
-            element.textContent = namaClass[className];
+    for (element of elements){
+        if (element) {
+            // Jika nilai properti adalah array, ambil elemen pertama
+            if (Array.isArray(namaClass[className])) {
+                element.textContent = namaClass[className][0];  // Ambil nilai pertama dari array
+            } else {
+                // Jika bukan array, langsung isi dengan nilai
+                element.textContent = namaClass[className];
+            }
         }
     }
+   
 }
