@@ -95,7 +95,7 @@ body {
 
 @font-face {
   font-family: 'Merriweather';
-  src: url('fonts/bismillah.woff2');
+  src: url('../fonts/bismillah.woff2');
   font-weight: normal;
   font-style: normal;
   unicode-range: U+FDFD;
@@ -103,7 +103,7 @@ body {
 
 @font-face {
   font-family: p406-v1;
-  src: url('fonts/p406-v1.woff2');
+  src: url('../fonts/p406-v1.woff2');
   font-weight: normal;
   font-style: normal;
 }
