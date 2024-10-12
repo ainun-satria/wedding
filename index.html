@@ -31,7 +31,7 @@
                 <div class="label">
                     <div class="to"><p class="point"><span class="model-destination-to"></span></p></div>
                     <div class="guest">
-                        <p class="point guest-name"><span class="model-destination-title"></span> <span class="model-destination-guestname"></span></p>
+                        <h6>Kepada <span>Bapak/Ibu/Saudara/i, </span></h6>
                         <p class="point">di</p>
                         <p class="point"><span class="model-destination-place"></span></p>
                     </div>
@@ -275,5 +275,13 @@
     @await RenderSectionAsync("Scripts", required: false)
     <script src="lib/jquery-validation/dist/jquery.validate.min.js"></script>
     <script src="lib/jquery-validation-unobtrusive/jquery.validate.unobtrusive.min.js"></script>
+    <script>
+        const urlParams = new URLSearchParams(window.location.search);
+        const nama = urlParams.get('n') || '';
+        const pronoun = urlParams.get('p') || 'Bapak/Ibu/Saudara/i';
+        const namaContainer = document.querySelector('.guest h6 span');
+        namaContainer.innerText = `${pronoun} ${nama},`.replace(/ ,$/, ',');
+
+    </script>
 </body>
 </html>
