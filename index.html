@@ -25,8 +25,7 @@
                 var submitted = Model.Guest != null && Model.Guest.LastSubmitDate != null;
             }
 
-            @if (general)
-            {
+        <div class="general">
             <div class="destination section">
                 <div class="label">
                     <div class="to"><p class="point"><span class="model-destination-to"></span></p></div>
@@ -37,7 +36,7 @@
                     </div>
                 </div>
             </div>
-            }
+        </div>
 
             <div class="text-center section">
                 <p class="title">Undangan Pernikahan</p>
@@ -58,15 +57,14 @@
             </div>
 
             <div class="text-center section">
-            @if (nonmoslem)
-            {
+            <div class="nonmoslem">
                 <p>Assalamualaikum wr. wb.</p>
-            }
-            else
-            {
+            </div>
+            <div class="moslem"></div>
                 <p class="arabic">السَّلاَمُ عَلَيْكُمْ وَرَحْمَةُ اللهِ وَبَرَكَاتُهُ</p>
-            }
+            </div>
                 
+
                 <p>Mahasuci Allah SWT yang telah menciptakan makhluk-Nya berpasang-pasangan.</br>Ya Allah  perkenankan kami untuk melaksanakan pernikahan kami.</p>
             </div>
 
@@ -101,14 +99,14 @@
 /
             <div class="text-center section">
                 <p>Merupakan suatu kehormatan dan kebahagiaan bagi kami apabila <span class="model-destination-greeting"></span> berkenan hadir untuk memberikan doa restu dalam acara pernikahan kami. Atas kehadiran dan doa restu <span class="model-destination-greeting"></span>, kami ucapkan terimakasih.</p>
-            @if (nonmoslem)
-            {
-                <p>Wassalamualaikum wr. wb.</p>
-            }
-            else
-            {
-                <p class="arabic">وَ السَّلاَمُ عَلَيْكُمْ وَرَحْمَةُ اللهِ وَبَرَكَاتُهُ</p>
-            }
+                <div class="nonmoslem">
+                    <p>Wassalamualaikum wr. wb.</p>
+                </div>
+                
+                <div class="moslem">
+                    <p class="arabic">وَ السَّلاَمُ عَلَيْكُمْ وَرَحْمَةُ اللهِ وَبَرَكَاتُهُ</p>
+                </div>
+                
             </div>
 
             <div class="text-center section foot">
@@ -137,8 +135,7 @@
                 </div>
             </div>
             <div class="text-center"><hr class="foot-ruler" /></div>
-            @if (general)
-            {
+        <div class="general">
             <div class="text-center section">
                 <p class="point">Apabila berkenan, mohon kesediaan <span class="model-destination-greeting"></span> untuk mengisi form di bawah ini. Atas kesediaan <span class="model-destination-greeting"></span> , kami ucapkan terima kasih.</p>
             </div>
@@ -224,9 +221,8 @@
                     </div>
                 </form>
             </div>
-            }
-            @if (Model.Posts != null && Model.Posts.Count > 0)
-            {
+        </div>
+            <div class="posts">
             <div class="section posts">
                 <div class="post-container no-gutter">
                     
@@ -253,7 +249,7 @@
                     }
                 </div>
             </div>
-            }
+        </div>
 
             <audio id="audio" loop>
             <source src="media/Maher.mp3" type="audio/mpeg">
