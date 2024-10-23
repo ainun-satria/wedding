@@ -81,6 +81,10 @@ body {
   font-style: italic;
 }
 
+.pesan {
+  font-style: italic;
+}
+
 .section {
   margin: 50px 0;
 }
@@ -267,7 +271,12 @@ div + .header3 {
   font-weight: 900;
 }
 
+.alamat{
+  font-weight: 200;
+}
+
 .post-container {
+  margin-top: 10px;
   overflow: hidden auto;
   max-height: 30rem;
   padding: 1rem 1.6rem;

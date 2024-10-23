@@ -1,0 +1,26 @@
+<div class="">
+                            <div class="row post-text">
+                                <div>
+                                    <p class="pesan">asdadasd </p>
+                                </div>
+                            </div>
+                            <div class="row">
+                                <div class="col-md post-author">
+                                    <p>&mdash; <span class="author-name"></span> | <span class="alamat"></span></p>
+                                </div>
+                            </div>
+                        </div>
+
+
+
+                        <div class="post-container no-gutter">
+                            <div class="row post-item"> 
+                                <p>satrua</p>
+                                <p>satrua | <span>Banjarmasin</span></p>
+                            </div>
+                        </div>
+        
+                        <div class="post-container no-gutter">
+                            <div class="row post-item"> 
+                            </div>
+                        </div>
