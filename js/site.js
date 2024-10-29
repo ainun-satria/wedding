@@ -117,44 +117,46 @@ for (let className in namaClass) {
    
 }
 
-const Komentars = [
-    {nama : "test 1", alamat:"banjar", pesan:"test test test"},
-    {nama : "test 2", alamat:"rantau", pesan:"test test test"},
-    {nama : "test 3", alamat:"binuang", pesan:"test test test"},
-    {nama : "test 4", alamat:"alabio", pesan:"test test test"},
-    {nama : "test 5", alamat:"martapura",pesan:"test test test"},
-    {nama : "Dian Gufron", alamat:"Jakarta",pesan:"test test test"},
-]
 
-const komentarContainer = document.getElementById('komentar');
 
-Komentars.forEach(
-    (komentar) => {
-        const komentarItem = document.createElement('div');
-        komentarItem.classList.add('post-container');
-        komentarItem.classList.add('no-gutter');
-        const komentarItemKedua = document.createElement('div');
-        komentarItemKedua.classList.add('row');
-        komentarItemKedua.classList.add('post-item');
+// const Komentars = [
+//     {nama : "test 1", alamat:"banjar", pesan:"test test test"},
+//     {nama : "test 2", alamat:"rantau", pesan:"test test test"},
+//     {nama : "test 3", alamat:"binuang", pesan:"test test test"},
+//     {nama : "test 4", alamat:"alabio", pesan:"test test test"},
+//     {nama : "test 5", alamat:"martapura",pesan:"test test test"},
+//     {nama : "Dian Gufron", alamat:"Jakarta",pesan:"test test test"},
+// ]
 
-        const quotes = document.createElement('p');
-        quotes.classList.add('quotes');
-        quotes.innerText = `\u201C ${komentar.pesan} \u201D`;
+// const komentarContainer = document.getElementById('komentar');
 
-        const nama = document.createElement('p');
-        nama.classList.add('author-name');
-        nama.innerText = `${komentar.nama} | `;
+// Komentars.forEach(
+//     (komentar) => {
+//         const komentarItem = document.createElement('div');
+//         komentarItem.classList.add('post-container');
+//         komentarItem.classList.add('no-gutter');
+//         const komentarItemKedua = document.createElement('div');
+//         komentarItemKedua.classList.add('row');
+//         komentarItemKedua.classList.add('post-item');
 
-        const alamat = document.createElement('span');
-        alamat.classList.add('alamat');
-        alamat.innerText = komentar.alamat;
-        nama.appendChild(alamat);
+//         const quotes = document.createElement('p');
+//         quotes.classList.add('quotes');
+//         quotes.innerText = `\u201C ${komentar.pesan} \u201D`;
 
-        komentarItem.appendChild(komentarItemKedua);
-        komentarItemKedua.appendChild(quotes);
-        komentarItemKedua.appendChild(nama);
+//         const nama = document.createElement('p');
+//         nama.classList.add('author-name');
+//         nama.innerText = `${komentar.nama} | `;
 
-        komentarContainer.appendChild(komentarItem)
+//         const alamat = document.createElement('span');
+//         alamat.classList.add('alamat');
+//         alamat.innerText = komentar.alamat;
+//         nama.appendChild(alamat);
+
+//         komentarItem.appendChild(komentarItemKedua);
+//         komentarItemKedua.appendChild(quotes);
+//         komentarItemKedua.appendChild(nama);
+
+//         komentarContainer.appendChild(komentarItem)
         
-    }
-)
+//     }
+// )

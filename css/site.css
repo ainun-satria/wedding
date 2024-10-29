@@ -24,6 +24,20 @@ a {
   border-color: #1861ac;
 }
 
+div .card{
+  width: 20rem;
+}
+
+div .miring{
+  font-style: italic;
+  margin:auto;
+}
+
+.tebal{
+  font-weight: 700;
+}
+
+
 /* Sticky footer styles
 -------------------------------------------------- */
 html {
