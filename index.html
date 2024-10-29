@@ -15,6 +15,11 @@
     <script src="sweetalert2.min.js"></script>
     <link rel="stylesheet" href="sweetalert2.min.css">  
     <link href="https://cdn.jsdelivr.net/npm/sweetalert2@11.14.4/dist/sweetalert2.min.css" rel="stylesheet">
+
+    <!-- simplyCountDown -->
+    <link rel="stylesheet" href="countdown/simplyCountdown.theme.default.css"/>
+    <script src="countdown/simplyCountdown.min.js"></script>
+
 </head>
 <body>
     <header>
@@ -37,6 +42,11 @@
                 <p class="title">Undangan Pernikahan</p>
                 <h1 class="header1 script">Ainun & Satria</h1>
                 <p class="subtitle">Minggu, 8 Desember 2024</p>
+                <p>Akan melangsungkan resepsi pernikahan dalam:</p>
+            </div>
+
+            <div class="simply-countdown text-center mx-auto mt-1">
+
             </div>
 
             <div class="text-center section">
@@ -220,6 +230,21 @@
         const pronoun = urlParams.get('p') || 'Bapak/Ibu/Saudara/i';
         const namaContainer = document.querySelector('.guest h6 span');
         namaContainer.innerText = `${pronoun} ${nama},`.replace(/ ,$/, ',');
+    </script>
+
+    <script>
+        simplyCountdown('.simply-countdown',{
+            year: 2024, // required
+            month: 12, // required
+            day: 8, // required
+            hours: 8, // Default is 0 [0-23] integer
+            words: { //words displayed into the countdown
+                days: { singular: 'hari', plural: 'hari' },
+                hours: { singular: 'jam', plural: 'jam' },
+                minutes: { singular: 'menit', plural: 'menit' },
+                seconds: { singular: 'detik', plural: 'detik' }
+            },
+            });
 
     </script>
 </body>
