@@ -119,6 +119,8 @@ for (let className in namaClass) {
 
 
 
+
+
 // const Komentars = [
 //     {nama : "test 1", alamat:"banjar", pesan:"test test test"},
 //     {nama : "test 2", alamat:"rantau", pesan:"test test test"},

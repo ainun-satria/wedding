@@ -62,11 +62,14 @@
             </div>
 
             <div class="text-center section">
+                
             <div class="nonmoslem">
                 <p>Assalamualaikum wr. wb.</p>
             </div>
+            <img src="img/flower2.png" alt="" class="flower_2">
             <div class="moslem">
                 <p class="arabic">السَّلاَمُ عَلَيْكُمْ وَرَحْمَةُ اللهِ وَبَرَكَاتُهُ</p>
+                
             </div>
                 
 
@@ -75,6 +78,7 @@
 
             <div class="text-center section">
                 <!-- <h2 class="header2 script">Calon Pengantin</h1> -->
+                <img src="img/flower2.png" alt="" class="flower_1">
                 <h3 class="header3 script">Nur Ainun</h3>
                 <p class="point subtitle">putri dari</p>
                 <p class="point subtitle">Bpk. Marwan</p>
@@ -171,7 +175,7 @@
                       </div>
                     </div>
                     <div class="col-8 mx-auto d-flex justify-content-center">
-                      <button class="btn btn-primary">Kirim</button>
+                      <button type="submit" class="btn btn-primary" id="submitButton">Kirim</button>
                     </div>
                   </form>
                 
@@ -196,10 +200,20 @@
     <script src="js/site.js" asp-append-version="true"></script>
     <script src="js/sheets.js"></script>
     <script>
+
+        const submitButton = document.getElementById("submitButton");
+        function disableForm() {
+            submitButton.disabled = true;
+        }
+
+        function enableForm() {
+            submitButton.disabled = false;
+        }
         window.addEventListener("load", function() {
         const form = document.getElementById('my-form');
         form.addEventListener("submit", function(e) {
           e.preventDefault();
+          disableForm()
           const data = new FormData(form);
           const action = e.target.action;
           fetch(action, {
@@ -214,7 +228,9 @@
               showConfirmButton: false,
               timer: 1500
             })
+            
             .then(()=> {location.reload();})
+            enableForm()
           });
         });
         });

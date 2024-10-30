@@ -49,6 +49,7 @@ div .miring{
   position: absolute;
   opacity: 0.2;
   left: -1.5rem;
+  transform: (180deg);
 }
 /* Sticky footer styles
 -------------------------------------------------- */
