@@ -37,7 +37,19 @@ div .miring{
   font-weight: 700;
 }
 
+.flower_1{
+  width: 150px;
+  position: absolute;
+  opacity: 0.2;
+  right: -1.5rem;
+}
 
+.flower_2{
+  width: 120px;
+  position: absolute;
+  opacity: 0.2;
+  left: -1.5rem;
+}
 /* Sticky footer styles
 -------------------------------------------------- */
 html {
@@ -75,19 +87,19 @@ html {
 body {
   /* Margin bottom by footer height */
   /* margin-bottom: 60px; */
-  background-color: #ffecd5;
+  background-color: #87ae73;
   font-family: Merriweather, serif;
 }
 
 .script {
   /* Margin bottom by footer height */
-  background-color: #ffe4c4;
+  background-color: #b6ceaa;
   font-family: "Great Vibes", serif;
 }
 
 .container {
   max-width: 760px;
-  background-color: #ffe4c4;
+  background-color: #b6ceaa;
   padding: 1rem 2rem 60px 2rem;
 }
 
