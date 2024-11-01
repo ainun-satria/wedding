@@ -90,6 +90,7 @@ body {
   /* margin-bottom: 60px; */
   background-color: #87ae73;
   font-family: 'Merriweather', serif;
+  overflow-x: hidden;
 }
 
 .script {
