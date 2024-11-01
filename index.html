@@ -159,7 +159,7 @@
                     <div class="col-8 mx-auto">
                       <div class="mb-3">
                         <label for="nama" class="form-label">Nama</label>
-                        <input type="text" class="form-control" id="nama" name="nama" required>
+                        <input type="text" class="form-control" id="nama" name="nama">
                       </div>
                       <div class="mb-3">
                         <label for="ucapan" class="form-label">Ucapan</label>
@@ -176,7 +176,9 @@
                       </div>
                     </div>
                     <div class="col-8 mx-auto d-flex justify-content-center">
-                      <button type="submit" class="btn btn-primary" id="submitButton">Kirim</button>
+                      <button type="submit" class="btn btn-primary d-flex align-items-center justify-content-center custom-width" id="submitButton">
+                            <div class="kirim" id="kirim">Kirim</div>
+                      </button>
                     </div>
                   </form>
                 
@@ -201,8 +203,8 @@
     <script src="js/site.js" asp-append-version="true"></script>
     <script src="js/sheets.js"></script>
     <script>
-
         const submitButton = document.getElementById("submitButton");
+        const submitKirim = document.getElementById("kirim");
         function disableForm() {
             submitButton.disabled = true;
         }
@@ -215,6 +217,7 @@
         form.addEventListener("submit", function(e) {
           e.preventDefault();
           disableForm()
+          submitKirim.innerHTML = "<div class='loader'></div>";
           const data = new FormData(form);
           const action = e.target.action;
           fetch(action, {
@@ -229,9 +232,10 @@
               showConfirmButton: false,
               timer: 1500
             })
-            
             .then(()=> {location.reload();})
-            enableForm()
+            enableForm();
+            submitKirim.classList.remove('loader');
+            submitKirim.classList.add('kirim');
           });
         });
         });
@@ -245,9 +249,13 @@
     <script>
         const urlParams = new URLSearchParams(window.location.search);
         const nama = urlParams.get('n') || '';
+        const kosong = '';
         const pronoun = urlParams.get('p') || 'Bapak/Ibu/Saudara/i';
         const namaContainer = document.querySelector('.guest h6 span');
+        const hasGParameter = urlParams.has('g');
         namaContainer.innerText = `${pronoun} ${nama},`.replace(/ ,$/, ',');
+        document.querySelector('#nama').value = hasGParameter ? '' : nama;
+
     </script>
 
     <script>

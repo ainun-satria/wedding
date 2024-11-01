@@ -89,7 +89,7 @@ body {
   /* Margin bottom by footer height */
   /* margin-bottom: 60px; */
   background-color: #87ae73;
-  font-family: Merriweather, serif;
+  font-family: 'Merriweather', serif;
 }
 
 .script {
@@ -122,6 +122,31 @@ body {
 
 .subtitle {
   /* font-family: 'Merriweather Light'; */
+}
+
+.custom-width{
+  width:120px;
+  height: 45px;
+  display: flex;
+}
+
+.loader{
+  pointer-events: none;
+  width: 30px;
+  height: 30px;
+  border-radius: 50%;
+  border: 3px solid transparent;
+  border-top-color: #fff;
+  animation: an1 1s ease infinite;
+}
+
+@keyframes an1 {
+  0%{
+    transform: rotate(0turn);
+  }
+  100%{
+    transform: rotate(1turn);
+  }
 }
 
 @font-face {
