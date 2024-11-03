@@ -28,6 +28,8 @@ div .card{
   width: 20rem;
 }
 
+
+
 div .miring{
   font-style: italic;
   margin:auto;
@@ -41,7 +43,9 @@ div .miring{
   width: 150px;
   position: absolute;
   opacity: 0.2;
-  right: -1.5rem;
+  right: 0rem;
+  object-fit: cover;
+  transform: (180deg);
 }
 
 .flower_2{
@@ -53,8 +57,12 @@ div .miring{
 }
 /* Sticky footer styles
 -------------------------------------------------- */
-html {
+body, html {
   font-size: 14px;
+  margin: 0;
+  padding: 0;
+  overflow-x: hidden;
+  width: 100%;
 }
 @media (min-width: 768px) {
   html {
@@ -324,9 +332,7 @@ div + .header3 {
   font-weight: 900;
 }
 
-.alamat{
-  font-weight: 200;
-}
+
 
 .post-container {
   margin-top: 10px;
