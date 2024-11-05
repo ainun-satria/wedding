@@ -11,6 +11,10 @@ const output = document.querySelector('.output');
  
 function init() {
     console.log('ready');
+
+    data.length = 0;  
+    output.innerHTML = ""; 
+    
     fetch(url)
         .then(res => res.text())
         .then(rep => {

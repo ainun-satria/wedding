@@ -232,13 +232,12 @@
             })
             .then(()=> {
                 enableForm();
-                // submitKirim.classList.remove('loader');
-                // submitKirim.classList.add('kirim');
-                fetch(window.location.href)
-                .then(res=>res.text())
-                .then(data=>{
-                    document.getElementsByClassName('output').innerHTML = data;
-                })
+                submitKirim.innerHTML = '<div class="kirim" id="kirim"  style="font-weight: bold; font-size: medium;">Kirim</div>'
+                init();
+                // .then(res=>res.text())
+           
+                    // document.getElementsByClassName('output').innerHTML = data;
+     
             })
           });
         });
