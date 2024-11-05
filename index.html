@@ -235,7 +235,12 @@
                 submitKirim.innerHTML = '<div class="kirim" id="kirim"  style="font-weight: bold; font-size: medium;">Kirim</div>'
                 init();
                 // .then(res=>res.text())
-           
+                                // Clear form fields except for the input with id="nama"
+                Array.from(form.elements).forEach((element) => {
+                    if (element.id !== "nama" && (element.tagName === "INPUT" || element.tagName === "TEXTAREA")) {
+                        element.value = ""; // Clear the value of each input or textarea except the one with id="nama"
+                    }
+                });
                     // document.getElementsByClassName('output').innerHTML = data;
      
             })
