@@ -232,12 +232,12 @@
             })
             .then(()=> {
                 enableForm();
-                submitKirim.classList.remove('loader');
-                submitKirim.classList.add('kirim');
-                return fetch(window.location.href)
+                // submitKirim.classList.remove('loader');
+                // submitKirim.classList.add('kirim');
+                fetch(window.location.href)
                 .then(res=>res.text())
                 .then(data=>{
-                    document.getElementById('output').innerHTML = data;
+                    document.getElementsByClassName('output').innerHTML = data;
                 })
             })
           });
