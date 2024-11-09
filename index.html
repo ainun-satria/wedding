@@ -136,10 +136,6 @@
                 <h1 class="header3 script">Ainun & Satria</h1>
             </div>
 
-            <!-- <div class="text-center section foot">
-                <p class="point">NB: Mari tetap mematuhi protokol kesehatan dengan: mencuci tangan, memakai masker dan menjaga jarak aman.</p>
-            </div> -->
-
             <div class="floating-wrapper">
                 <div id="media-control" class="floating-control control stopped">
                     <i id="media-icon" class="bi bi-music-note-beamed"></i>
@@ -177,7 +173,7 @@
                     </div>
                     <div class="col-8 mx-auto d-flex justify-content-center">
                       <button type="submit" class="btn btn-primary d-flex align-items-center justify-content-center custom-width" id="submitButton">
-                            <div class="kirim" id="kirim">Kirim</div>
+                            <div class="kirim" id="kirim"  style="font-weight: bold; font-size: medium;">Kirim</div>
                       </button>
                     </div>
                   </form>
@@ -225,7 +221,8 @@
             method: 'POST',
             body: data,
           })
-          .then(() => {
+
+          .then(html => {
             Swal.fire({
               position: "center",
               icon: "success",
@@ -233,10 +230,20 @@
               showConfirmButton: false,
               timer: 1500
             })
-            .then(()=> {location.reload();})
-            enableForm();
-            submitKirim.classList.remove('loader');
-            submitKirim.classList.add('kirim');
+            .then(()=> {
+                enableForm();
+                submitKirim.innerHTML = '<div class="kirim" id="kirim"  style="font-weight: bold; font-size: medium;">Kirim</div>'
+                init();
+                // .then(res=>res.text())
+                                // Clear form fields except for the input with id="nama"
+                Array.from(form.elements).forEach((element) => {
+                    if (element.id !== "nama" && (element.tagName === "INPUT" || element.tagName === "TEXTAREA")) {
+                        element.value = ""; // Clear the value of each input or textarea except the one with id="nama"
+                    }
+                });
+                    // document.getElementsByClassName('output').innerHTML = data;
+     
+            })
           });
         });
         });

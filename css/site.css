@@ -113,6 +113,8 @@ body {
   padding: 1rem 2rem 60px 2rem;
 }
 
+
+
 .quotes {
   font-style: italic;
 }
@@ -134,8 +136,8 @@ body {
 }
 
 .custom-width{
-  width:120px;
-  height: 45px;
+  width:90px;
+  height: 40px;
   display: flex;
 }
 
