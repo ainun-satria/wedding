@@ -15,6 +15,7 @@
     <script src="sweetalert2.min.js"></script>
     <link rel="stylesheet" href="sweetalert2.min.css">  
     <link href="https://cdn.jsdelivr.net/npm/sweetalert2@11.14.4/dist/sweetalert2.min.css" rel="stylesheet">
+    <link type="text/css" rel="stylesheet" media="screen" href="css/jquery-sakura.min.css" />
 
     <!-- simplyCountDown -->
     <link rel="stylesheet" href="countdown/simplyCountdown.theme.default.css"/>
@@ -280,6 +281,18 @@
             },
             });
 
+    </script>
+    <script src="js/jquery-sakura.min.js"></script>
+    <script>
+        // domReady
+        $(function() {
+            $('body').sakura();
+        });
+    
+        // windowLoad
+        $(window).load(function() {
+            $('body').sakura();
+        });
     </script>
 </body>
 </html>
