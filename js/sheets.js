@@ -12,12 +12,13 @@ const output = document.querySelector('.output');
 function init() {
     console.log('ready');
 
-    data.length = 0;  
-    output.innerHTML = ""; 
+ 
     
     fetch(url)
         .then(res => res.text())
         .then(rep => {
+            data.length = 0;  
+            output.innerHTML = ""; 
 
             const jsData = JSON.parse(rep.substring(47).slice(0, -2));
 
@@ -63,7 +64,7 @@ function maker(json){
         keys.forEach(
             (key) => {
                 const value = el[key];
-                console.log(value)
+                // console.log(value)
                 const ele = document.createElement('p');
                 if (key === 'nama'){
                     ele.classList.add('card-header', 'tebal');
