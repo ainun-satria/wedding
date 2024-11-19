@@ -156,18 +156,18 @@
                     <div class="col-8 mx-auto">
                       <div class="mb-3">
                         <label for="nama" class="form-label">Nama</label>
-                        <input type="text" class="form-control" id="nama" name="nama">
+                        <input type="text" class="form-control" id="nama" name="nama" required>
                       </div>
                       <div class="mb-3">
                         <label for="ucapan" class="form-label">Ucapan</label>
-                        <textarea class="form-control" id="ucapan" name="ucapan" rows="3" type="text" required></textarea>
+                        <textarea class="form-control" id="ucapan" name="ucapan" rows="3" type="text" required ></textarea>
                       </div>
                 
                       <div class="mb-3">
                         <label for="status" class="form-label">Konfirmasi</label>
-                        <select name="status" id="status" class="form-select">
-                          <option selected>Pilih salah satu</option>
-                          <option value="hadir">Hadir</option>
+                        <select name="status" id="status" class="form-select" required >
+                          <option value="" selected disabled>Pilih salah satu</option>
+                          <option value="hadir">InsyaAllah Hadir</option>
                           <option value="tidak hadir">Tidak Hadir</option>
                         </select>
                       </div>
